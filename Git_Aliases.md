@@ -1,5 +1,3 @@
-# How to create and use aliases in Git:
-
 # Git Aliases
 
 ## Introduction
