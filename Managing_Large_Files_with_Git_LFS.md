@@ -62,3 +62,56 @@ git lfs clone <repository_URL>
 ## Conclusion
 
 Git LFS is a powerful tool for managing large files in Git repositories. By following these steps, you can efficiently handle large assets while keeping your repository size under control.
+
+
+## Note
+
+# Specify file types for Git attributes (.gitattributes )
+
+# Text files
+*.txt   text
+
+# Shell scripts
+*.sh    text eol=lf
+
+# Markdown files
+*.md    text
+
+# Batch files
+*.bat   text eol=crlf
+
+# Source code files
+*.c     text
+*.cpp   text
+*.java  text
+*.py    text
+*.js    text
+*.html  text
+*.css   text
+
+# Configuration files
+*.xml   text
+*.json  text
+*.yaml  text
+*.yml   text
+
+# Git configuration files
+.git*   text
+
+# Binary files
+*.png   binary
+*.jpg   binary
+*.gif   binary
+*.pdf   binary
+
+# Executable files
+*.exe   binary
+*.dll   binary
+*.jar   binary
+
+# Archive files
+*.zip   binary
+*.tar   binary
+*.gz    binary
+*.bz2   binary
+
