@@ -39,3 +39,22 @@ Now, your local changes are pushed to your GitHub repository.
 Replace `<repository_URL>` and `your-repo` with your actual GitHub repository URL and local repository name.
 
 "If you encounter any further issues, please feel free to comment. We're here to help!"
+
+---
+##  Create a new repository on the command line
+   ```bash
+echo "# Easy-Fill" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/bhargav1997/Easy-Fill.git
+git push -u origin main
+   ```
+
+## Push an existing repository from the command line
+  ```bash
+git remote add origin https://github.com/bhargav1997/Easy-Fill.git
+git branch -M main
+git push -u origin main
+   ```
