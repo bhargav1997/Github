@@ -76,3 +76,78 @@ Go to the "Actions" tab in your GitHub repository to monitor the workflow execut
 
 This is a basic example, and you can customize the workflow according to your project's needs.
 Additionally, you might need to adjust the deployment steps based on the specific cloud service you are using.
+
+### In a YAML file used for configuring Continuous Integration (CI) and Continuous Deployment (CD) workflows, each keyword serves a specific purpose. Here's an explanation of each keyword commonly found in such YAML files:
+
+1. **name:**
+   - **Purpose:** Specifies the name of the workflow.
+   - **Example:** `name: CI-CD Workflow`
+
+2. **on:**
+   - **Purpose:** Defines the triggers that initiate the workflow.
+   - **Example:** 
+     ```yaml
+     on:
+       push:
+         branches:
+           - main
+     ```
+
+3. **jobs:**
+   - **Purpose:** Contains one or more jobs to be executed as part of the workflow.
+   - **Example:** 
+     ```yaml
+     jobs:
+       build:
+         ...
+       deploy:
+         ...
+     ```
+
+4. **runs-on:**
+   - **Purpose:** Specifies the operating system and environment for job execution.
+   - **Example:** `runs-on: ubuntu-latest`
+
+5. **steps:**
+   - **Purpose:** Contains a sequence of actions to be executed within a job.
+   - **Example:** 
+     ```yaml
+     steps:
+       - name: Checkout Repository
+         uses: actions/checkout@v2
+       - name: Setup Node.js
+         uses: actions/setup-node@v2
+         with:
+           node-version: '14'
+       ...
+     ```
+
+6. **uses:**
+   - **Purpose:** Specifies an action or a reusable action that performs a specific task.
+   - **Example:** `uses: actions/checkout@v2`
+
+7. **with:**
+   - **Purpose:** Provides input parameters or configuration options for an action.
+   - **Example:** 
+     ```yaml
+     with:
+       node-version: '14'
+     ```
+
+8. **secrets:**
+   - **Purpose:** Enables access to encrypted secrets stored in GitHub repository settings.
+   - **Example:** 
+     ```yaml
+     secrets:
+       HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
+     ```
+
+9. **needs:**
+   - **Purpose:** Specifies dependencies between jobs, ensuring that one job waits for another to complete before starting.
+   - **Example:** `needs: build`
+
+10. **environment:**
+    - **Purpose:** Defines the runtime environment for a job, such as production, staging, or testing.
+    - **Example:** `environment: production`
+
+These keywords are essential for configuring CI/CD workflows effectively in YAML files. They define the structure and behavior of the workflow, including triggers, actions, dependencies, and runtime environments.
