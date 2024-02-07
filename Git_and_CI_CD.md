@@ -46,8 +46,6 @@ jobs:
         heroku_email: "your-heroku-email@example.com"
 ```
 
-**You can see all the actions : Here [https://github.com/actions](https://github.com/actions)**
-
 ### Step 2: Set up Heroku
 
 - Create an account on [Heroku](https://www.heroku.com/) if you don't have one.
@@ -153,3 +151,9 @@ Additionally, you might need to adjust the deployment steps based on the specifi
     - **Example:** `environment: production`
 
 These keywords are essential for configuring CI/CD workflows effectively in YAML files. They define the structure and behavior of the workflow, including triggers, actions, dependencies, and runtime environments.
+
+
+## Important Links
+
+- **You can see all the actions : Here [https://github.com/actions](https://github.com/actions)**
+- **Different Types of Events: [https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows)**
