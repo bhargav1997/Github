@@ -152,8 +152,31 @@ Additionally, you might need to adjust the deployment steps based on the specifi
 
 These keywords are essential for configuring CI/CD workflows effectively in YAML files. They define the structure and behavior of the workflow, including triggers, actions, dependencies, and runtime environments.
 
+## Notes
+1. How to run on multiple OS
 
-## Important Links
+```yaml
+jobs:
+ build:
+   runs-on: ${{matrix.os}}
+   strategy:
+      matrix: 
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+
+```
+2. Dependence build job to execute first after publish job execute. How?
+
+```yaml
+jobs:
+ build:
+---
+ publish:
+   needs: build
+
+
+```
+
+## Important 
 
 - **You can see all the actions : Here [https://github.com/actions](https://github.com/actions)**
 - **Different Types of Events: [https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows](https://docs.github.com/en/actions/using-workflows/events-that-trigger-workflows)**
