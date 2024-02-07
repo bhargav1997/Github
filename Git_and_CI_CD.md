@@ -169,11 +169,9 @@ jobs:
 ```yaml
 jobs:
  build:
----
+ ...
  publish:
    needs: build
-
-
 ```
 
 ## Important 
