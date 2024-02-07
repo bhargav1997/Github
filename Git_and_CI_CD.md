@@ -46,6 +46,8 @@ jobs:
         heroku_email: "your-heroku-email@example.com"
 ```
 
+**You can see all the actions : Here [https://github.com/actions](https://github.com/actions)**
+
 ### Step 2: Set up Heroku
 
 - Create an account on [Heroku](https://www.heroku.com/) if you don't have one.
